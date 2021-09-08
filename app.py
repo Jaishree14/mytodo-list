@@ -87,7 +87,7 @@ def before_request():
         user = [x for x in users if x.id == session['user_id']][0]
         g.user = user
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         session.pop('user_id', None)
